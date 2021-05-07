@@ -1,9 +1,14 @@
 import React from 'react';
+import { Provider } from 'react-redux'
+import store from './store/store';
+import { CoursesList } from './components';
 
 export default function App() {
   return (
     <>
-    <h1>Olá mundo</h1>
+    <Provider store={store}>  
+      <CoursesList />
+    </Provider>
     </>   
   );
 }
